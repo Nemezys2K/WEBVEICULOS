@@ -1,0 +1,145 @@
+section {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+ul {
+  border-radius: 20px;
+  font-size: 17px;
+}
+
+#ul21 {
+  background-color: #C9D1D3;
+
+}
+
+#ul22 {
+  background-color: #3B3737;
+}
+
+img {
+  width: 368px;
+  height: 350px;
+}
+
+ul {
+  border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box;*/
+}
+
+div {
+  display: inline-block;
+
+}
+
+#ul2 {
+  background-color: gray;
+  border-radius: 4px;
+  font-size: 17px;
+
+}
+
+main {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  height: 1508px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: rgba(77, 77, 77,0.7);
+  background-position: center center;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 10px 5px 5px black;
+  color: white;
+}
+
+.veiculo {
+  margin: auto;
+  align-items: center;
+  display: flex;
+  justify-content:center;
+  width: 500px;
+  position: relative;
+}
+
+.destaques {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+}
+
+.destacar {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  padding: 50px;
+
+}
+
+
+div.sub-title {
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+div.content p {
+  padding: 0 0 0 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.gallery-container {
+  display: flex;
+
+  justify-content: space-evenly;
+  gap: 3vw;
+  padding: 0 10vw;
+}
+
+.gallery-items {
+  width: 120px;
+  height: 140px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px #0006;
+  flex-grow: 1;
+  transition: 0.5s all ease-in-out
+}
+
+.gallery-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-items:hover {
+  transform: scale(1.3);
+}
+
+button{
+  border-radius: 5px;
+  width: 180px;
+  height: 25px;
+  margin: auto auto auto 35%;
+  background-color: #F7F7F7;
+  border-color: #F7F7F7;
+}
+

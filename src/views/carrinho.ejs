@@ -1,0 +1,61 @@
+<%- include ('./partials/header.ejs') %>
+
+<body>
+    <link rel="stylesheet" href="/css/carrinho.css">
+    <%- include('./partials/navbar.ejs') %>
+      
+        <main>
+
+            <produtos>
+                <% for(let veic of veiculos) { %>
+                    <a href="/produtos/<%=veic.idProduto %>">
+                        <veiculo>   
+                            <img src="<%=veic.Imagem %>" alt="Veiculo selecionado">
+                            <p><%=marcas[veic.Marcas_idMarcas-1].Nome  %> <%=veic.Modelo %> <%=veic.Ano %> </p>
+                            <p>R$ <%=veic.Valor %></p>                       
+                        </veiculo>  
+                    </a>   
+                <% } %>
+                
+            </produtos>
+
+            <ms><%=mensagem %></ms>   
+    
+            <options>
+                <article>   
+                    <p>Resumo do pedido </p>
+                    <br><br>
+                    <label>Endereço de faturamento</label>
+                    <input type="text" name="endereco" value="<%=usuario.Endereco %>" autocomplete="off" readonly>
+                    <button type="submit">
+                        <a href="/usuarios/">Alterar endereço</a>
+                    </button>
+                    <br><br>
+                    <p>Total</p>    
+                    <p>R$ <%=valorTotal %></p>   
+                    
+                    <br><br>
+                    <button>
+                        <a href="/produtos/finalizacao">Finalizar Compra</a>
+                    </button>
+
+                    <button>
+                        <a href="/produtos">Adicionar mais produtos</a>
+                    </button>
+                    
+
+                    <form action="/produtos/carrinho" method="post" enctype="application/json" id="carrinho">
+                        <input type="idProduto" name="idProduto" value="0" hidden>
+                        <button type="submit">Limpar Carrinho</button>
+                    </form>        
+                    
+    
+                </article>
+            </options>
+
+        </main>
+
+    <%- include('./partials/footer.ejs') %>
+            
+</body>
+</html>

@@ -1,0 +1,53 @@
+<%- include("./partials/header.ejs") %>
+
+<body>
+    <link rel="stylesheet" href="/css/usuario.css">
+    <%- include("./partials/navbar.ejs") %>
+
+
+    <!-- aqui -->
+    <main>
+        <ul class="dados">
+            <a href="/usuarios/">
+                <li>
+                    Voltar para
+                </li>
+                <h3>Minha Conta</h3>                
+            </a>
+        </ul>
+        <br>
+        <div class="pedidos">
+            <h3>Meus pedidos</h3>
+            <br>
+
+
+            <% for(let ped of pedidos) { %>
+                <div class="info">
+                    <h4>N° pedido</h4>
+                    <h4>Status</h4>
+                    <h4>Pagamento</h4>
+                </div>
+                <div>
+                    <div class="dadosPedidos">
+                            
+                            <h4><%= ped.idPedidos %></h4>
+                            <h4><%= ped.Status %></h4>
+                            <h4>1</h4>
+                    </div>                 
+                </div>
+                <br><br>
+            <% } %>
+
+
+        </div>
+    </main>
+
+
+
+    <!-- aqui -->
+
+
+    <%- include("./partials/footer.ejs") %>
+</body>
+
+</html>
